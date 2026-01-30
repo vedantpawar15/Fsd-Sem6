@@ -1,9 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Experiment 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream11 Pro UI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* CUSTOM CSS: This is where we give the app its 'Soul' */
+        :root {
+            --d11-red: #d71921;
+            --d11-light-gray: #f4f4f4;
+        }
+
+        body {
+            background-color: var(--d11-light-gray);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding-bottom: 80px; /* Space for the bottom nav */
+        }
+
+        /* Making the header look like a real app bar */
+        .app-header {
+            background-color: var(--d11-red);
+            color: white;
+            padding: 12px;
+        }
+
+        /* Custom Contest Card */
+        .contest-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .contest-card:active {
+            transform: scale(0.98); /* Shrinks slightly when clicked */
+        }
+
+        /* The 'Entry' button styling */
+        .btn-entry {
+            background-color: #28a745;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            min-width: 70px;
+        }
+
+        /* Bottom Nav Styling */
+        .bottom-nav {
+            height: 65px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <h1>Responsive Website using HTML5 and Bootstrap</h1>
+
+    <header class="app-header sticky-top shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-list fs-4"></i>
+                <span class="fw-bold">Team11</span>
+            </div>
+            <div class="d-flex gap-3">
+                <i class="bi bi-wallet2"></i>
+                <i class="bi bi-bell"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-white py-2 px-3 border-bottom d-flex justify-content-between align-items-center">
+        <div class="text-center">
+            <span class="fw-bold d-block">BHARAT</span>
+            <small class="text-muted">Hindustan</small>
+        </div>
+        <div class="text-center">
+            <span class="badge rounded-pill bg-light text-danger border">04m 22s left</span>
+        </div>
+        <div class="text-center">
+            <span class="fw-bold d-block">KANGAROO</span>
+            <small class="text-muted">HopHop</small>
+        </div>
+    </div>
+
+    <main class="container mt-3">
+        <h6 class="fw-bold text-secondary mb-3">Mega Contest</h6>
+
+        <div class="card contest-card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <small class="text-muted">Prize Pool</small>
+                        <h4 class="fw-bold mb-0">₹45 Crores</h4>
+                    </div>
+                    <div class="text-end">
+                        <small class="text-muted">Entry</small>
+                        <div class="btn-entry py-1 px-3">₹49</div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-warning" style="width: 70%;"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                        <small class="text-danger fw-bold">3,45,000 spots left</small>
+                        <small class="text-muted">10 Lakh spots</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer bg-light border-0 d-flex gap-3 py-2">
+                <small class="text-muted"><i class="bi bi-trophy"></i> ₹1.5 Cr</small>
+                <small class="text-muted"><i class="bi bi-check-circle"></i> 62% Winners</small>
+                <small class="text-muted"><i class="bi bi-shield-check"></i> Guaranteed</small>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bottom-nav fixed-bottom bg-white d-flex justify-content-around align-items-center">
+        <div class="text-center text-danger">
+            <i class="bi bi-house-door-fill fs-5"></i>
+            <div style="font-size: 10px;">Home</div>
+        </div>
+        <div class="text-center text-muted">
+            <i class="bi bi-trophy fs-5"></i>
+            <div style="font-size: 10px;">My Matches</div>
+        </div>
+        <div class="text-center text-muted">
+            <i class="bi bi-chat-left-dots fs-5"></i>
+            <div style="font-size: 10px;">Chat</div>
+        </div>
+        <div class="text-center text-muted">
+            <i class="bi bi-person fs-5"></i>
+            <div style="font-size: 10px;">Winner</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
